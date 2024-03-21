@@ -1,0 +1,55 @@
+.name {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    background-color: blue;
+    color: white;
+    margin: auto;
+
+}
+
+.intro {
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    padding-top: 10%;
+}
+
+.Logo {
+    text-align: center;
+    margin-top: 20%;
+    margin-bottom: 15%;
+    /* 이미지 상하단 여백 */
+}
+
+.button {
+    text-align: center;
+}
+
+.login {
+    margin-right: 5px;
+    border-radius: 10px;
+}
+
+.signup {
+    margin-left: 5px;
+    border-radius: 10px;
+}
+
+.Input {
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+.id {
+    margin-left: 3%;
+}
+
+.pw {
+    margin-left: 1%;
+}
+.button{
+    padding-top: 5%;
+}

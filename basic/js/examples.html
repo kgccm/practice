@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript 예제</title>
+</head>
+<body>
+
+  <!-- <style>
+    #btn {
+      width: 2rem;
+      cursor: pointer;
+      fill: #ddd;
+    }
+
+    #btn.active {
+      fill: #05f;
+    }
+  </style>
+
+  <h1>좋아요 버튼</h1>
+
+  <svg 
+    id="btn"
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 512 512"
+  >
+    <path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z"/>
+  </svg>
+
+  <script>
+    var btn = document.getElementById("btn");
+
+    btn.addEventListener("click", function () {
+      //  toggle(): 클래스가 있으면 제거하고 없으면 추가한다
+      btn.classList.toggle("active");
+    })
+  </script> -->
+
+  <!-- <style>
+      #container {
+        position: relative;
+        display: inline-block;
+      }
+
+      #input {
+        padding: 0.5rem;
+        width: 16rem;
+      }
+
+      #btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        padding: 0 1rem;
+        font-weight: 600;
+      }
+  </style>
+
+  <h1>password toggle</h1>
+
+  <div id="container">
+    <input id="input" type="password" value="123">
+    <button id="btn">Show</button>
+  </div>
+
+  <script>
+    var input = document.getElementById("input");
+    var btn = document.getElementById("btn");
+
+    btn.addEventListener("click", function () {
+      console.log(input.type); // password
+
+      if (input.type === "text") {
+        input.type = "password"
+        btn.textContent = "Show";
+      } else {
+        input.type = "text"
+        btn.textContent = "Hide";
+      }
+    })
+  </script> -->
+
+  <!-- <style>
+    #container {
+      display: inline;
+    }
+
+    #btn {
+      border: none;
+      cursor: pointer;
+      background-color: transparent;
+      color: #888;
+      padding: 0;
+    }
+
+    #btn.hidden {
+      display: none;
+    }
+  </style>
+
+  <h1>더보기 버튼</h1>
+
+  <p id="container">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+    Itaque ut odit commodi officiis fugiat praesentium, 
+    eum aut tenetur porro sint voluptate repellendus ab laudantium dolor, 
+    quasi id ea obcaecati eaque?
+  </p>
+  
+  <button id="btn">more</button>
+
+  <script>
+    var container = document.getElementById("container");
+    var btn = document.getElementById("btn");
+    var fullContent = container.textContent;
+    // substring(startIndex, endIndex): 문자열에서 특정 구간의 문자를 추출한다
+    var lessContent = fullContent.substring(0, 50) + "...";
+
+    console.log(fullContent)
+    console.log(lessContent)
+
+    // 페이지가 처음 로드되었을 때
+    container.textContent = lessContent;
+
+    // 더보기 버튼을 클릭했을 때
+    btn.addEventListener("click", function () {
+      container.textContent = fullContent;
+      btn.classList.add("hidden");
+    })
+
+  </script> -->
+
+  <!-- <style>
+    html {
+      /* 부드럽게 스크롤된다 */
+      scroll-behavior: smooth;
+    }
+
+    body {
+      height: 2000px;
+    }
+
+    #btn {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 2rem;
+      cursor: pointer;
+    }
+
+    #btn.invisible {
+      visibility: hidden;
+    }
+  </style>
+
+  <h1>탑버튼</h1>
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+    Molestias, officia eaque. Magni quos minima explicabo magnam laudantium 
+    alias ipsum provident, corrupti culpa voluptas incidunt in, 
+    dolore aliquam et accusantium suscipit.
+  </p>
+
+  <svg 
+    id="btn"
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 512 512"
+    class="invisible"
+  >
+    <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM385 231c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-71-71V376c0 13.3-10.7 24-24 24s-24-10.7-24-24V193.9l-71 71c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9L239 119c9.4-9.4 24.6-9.4 33.9 0L385 231z"/>
+  </svg>
+
+  <script>
+    var btn = document.getElementById("btn");
+
+    window.addEventListener("scroll", function () {
+      // 문서 탑과 뷰포트 탑 사이의 거리
+      var scrollTop = document.documentElement.scrollTop;
+
+      console.log(scrollTop);
+
+      if (scrollTop > 200) {
+        // 탑버튼을 나타나게 한다
+        btn.classList.remove("invisible")
+      } else {
+        // 탑버튼을 사라지게 한다
+        btn.classList.add("invisible")
+      }
+    })
+
+    // 탑버튼을 클릭했을 때
+    btn.addEventListener("click", function () {
+      document.documentElement.scrollTop = 0;
+    })
+  </script> -->
+
+  <style>
+    body {
+      height: 2000px;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      backdrop-filter: blur(8px);
+    }
+
+    .header-inner {
+      border-bottom: 1px solid #ddd;
+    }
+
+    #btn {
+      border: none;
+      background-color: transparent;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    nav {
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    nav a {
+      display: block;
+      text-align: center;
+      padding: 0.5rem;
+      text-decoration: none;
+      color: #000;
+      opacity: 0.5;
+    }
+
+    nav a:hover {
+      opacity: 1;
+    }
+
+    main {
+      margin-top: 4rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+
+  <header>
+    <div class="header-inner">
+      <button id="btn">&#9776;</button>
+    </div>
+    <nav class="hidden" id="nav">
+      <ul>
+        <li>
+          <a href="#">Link</a>
+        </li>
+        <li>
+          <a href="#">Link</a>
+        </li>
+        <li>
+          <a href="#">Link</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Top navigation</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, explicabo iure ipsum rerum corrupti rem maiores
+      doloremque porro deserunt illum non sequi! Veritatis perspiciatis vitae enim error. In, magnam officia?</p>
+  </main>
+
+  <script>
+    var btn = document.getElementById("btn");
+    var nav = document.getElementById("nav");
+
+    // 메뉴 버튼을 클릭했을 때
+    btn.addEventListener("click", function () {
+      nav.classList.toggle("hidden");
+    })
+
+    // 빈 공간을 클릭했을 때 처리
+
+    // document에 이벤트 감시자(event listener)를 추가한다
+    // document가 이벤트 감지 영역
+    document.addEventListener("click", function (e) {
+      // e.target: 실제 이벤트가 발생한 엘리먼트
+      console.log(e.target);
+
+      // 문서에서 버튼을 제외한 곳을 클릭했을 경우
+      if (e.target !== btn) {
+        nav.classList.add("hidden");
+      }
+    })
+
+  </script>
+
+  <!-- <style>
+    body {
+      height: 1000px;
+      margin: 0;
+    }
+
+    header {
+      /* position */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+
+      /* display */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: transparent;
+      /* 애니메이션 효과 */
+      transition: background-color 0.5s;
+    }
+
+    .bg-image {
+      background-image: linear-gradient(to right, #0ef, #0af);
+      height: 400px;
+    }
+
+    .active {
+      background-color: #fff;
+    }
+  </style>
+
+  <header id="header">
+    Transparent NavBar
+  </header>
+
+  <div class="bg-image"></div>
+
+  <script>
+    var header = document.getElementById("header");
+
+    window.addEventListener("scroll", function () {
+      // 문서 탑과 뷰포트 탑 사이의 거리
+      var scrollTop = document.documentElement.scrollTop;
+
+      console.log(scrollTop);
+
+      if (scrollTop > 50) {
+        header.classList.add("active");
+      } else {
+        header.classList.remove("active");
+      }
+    })
+  </script> -->
+
+
+  <!-- <style>
+    #btn {
+      font-size: 2rem;
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+    }
+
+    #side-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 16rem;
+      background-color: #fff;
+      transition: 0.2s;
+      /* 포지션 경쟁이 발생할 때 값이 높을수록 우선순위를 갖는다 */
+      z-index: 1;
+    }
+
+    #side-bar h1 {
+      text-align: center;
+    }
+
+    #overlay {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0 0 0 / 0.2);
+    }
+
+    #side-bar.hidden {
+      left: -16rem;
+    }
+
+    #overlay.hidden {
+      display: none;
+    }
+  </style>
+
+  <button id="btn">&#9776;</button>
+
+  <nav id="side-bar" class="hidden">
+    <h1>Logo</h3>
+    <ul>
+      <li>Menu</li>
+      <li>Menu</li>
+      <li>Menu</li>
+    </ul>
+  </nav>
+
+  <div id="overlay" class="hidden"></div>
+
+  <main>
+    <h1>Side Bar</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+      Ipsa ipsum voluptatibus perferendis iusto consectetur odio
+      molestiae ratione est nobis facere quas nesciunt non animi commodi error, 
+      vel optio? Aspernatur, vel?</p>
+  </main>
+
+  <script>
+    var btn = document.getElementById("btn");
+    var sideBar = document.getElementById("side-bar");
+    var overlay = document.getElementById("overlay");
+
+    // 메뉴 버튼을 클릭했을 때
+    btn.addEventListener("click", function () {
+      sideBar.classList.remove("hidden");
+      overlay.classList.remove("hidden");
+    })
+
+    // 오버레이를 클릭했을 때
+    overlay.addEventListener("click", function () {
+      sideBar.classList.add("hidden");
+      overlay.classList.add("hidden");
+    })
+  </script> -->
+
+  <!-- <style>
+    body {
+      height: 1000px;
+    }
+
+    #header {
+      /* position */
+      position: fixed;
+      top: 0;
+      left: 0;
+      
+      /* size */
+      width: 100%;
+      height: 50px;
+
+      /* display */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      /* style */
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      
+      transition: top 0.2s;
+    }
+
+    #header.hidden {
+      top: -50px;
+    }
+
+    main {
+      margin-top: 4rem;
+    }
+  </style>
+
+  <header id="header">
+    Header
+  </header>
+
+  <main>
+    <h1>Switch NavBar</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse ad odio doloremque corrupti architecto quam error
+      natus illo commodi adipisci deleniti eligendi officiis molestiae eum iste, tenetur, rerum, eius fuga.</p>
+  </main>
+
+  <script>
+    var header = document.getElementById("header");
+    var previousScrollTop = 0;
+
+    window.addEventListener("scroll", function () {
+      var scrollTop = document.documentElement.scrollTop;
+
+      // 이전 시점의 변수(scrollTop)의 값에 접근
+      console.log("이전 스크롤 값:", previousScrollTop);
+      console.log("현재 스크롤 값:", scrollTop);
+
+      if (scrollTop > previousScrollTop) { // 스크롤을 내릴 때
+        header.classList.add("hidden");
+      } else { // 스크롤을 올릴 때
+        header.classList.remove("hidden");
+      }
+
+      previousScrollTop = scrollTop;
+    })
+
+  </script> -->
+
+
+  <!-- <h1>Drawer</h1>
+
+  <style>
+    #nav {
+      /* position */
+      position: fixed;
+      left: 0;
+      top: 100vh;
+
+      /* size */
+      width: 100%;
+      height: 100vh;
+      box-sizing: border-box;
+
+      /* style */
+      border: 1px solid #ddd;
+      background-color: #fff;
+      border-radius: 1rem 1rem 0 0;
+      
+      /* smooth */
+      transition: top 0.5s;
+    }
+
+    #drawer-handle {
+      /* size */
+      width: 100%;
+      padding: 1rem;
+
+      /* style */
+      border: none;
+      background-color: transparent;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+  </style>
+
+  <nav id="nav" class="hidden">
+    <button id="drawer-handle">Drag me</button>
+    <ul>
+      <li>list item</li>
+      <li>list item</li>
+      <li>list item</li>
+    </ul>
+  </nav>
+
+  <button id="open-btn" type="button">More</button>
+
+
+  <script>
+    var nav = document.getElementById("nav");
+    var drawerHandle = document.getElementById("drawer-handle");
+    var openBtn = document.getElementById("open-btn");
+    var TOP;
+
+    // 열기 버튼을 클릭했을 때
+    openBtn.addEventListener("click", function () {
+      nav.style.top = "20vh";
+    })
+
+    // 터치중일 때
+    drawerHandle.addEventListener("touchmove", function (e) { // e: 이벤트 객체
+
+      // 손가락과 뷰포트 탑사이의 거리(y축)
+      var clientY = e.touches[0].clientY;
+
+      console.log(clientY);
+
+      // innerHeight: 뷰포트의 높이
+      TOP = clientY / window.innerHeight * 100;
+
+      nav.style.top = TOP + "vh";
+    })
+
+    // 터치가 끝났을 때
+    drawerHandle.addEventListener("touchend", function () {
+      console.log("터치 끝");
+
+      if (TOP > 50) { // 핸들을 반 이상 내렸을 경우
+        nav.style.top = "100vh"
+      } else {
+        nav.style.top = "20vh"
+      }
+    })
+
+  </script> -->
+
+  <!-- <style>
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0 0 0 / 0.2);
+    }
+
+    #modal {
+      background-color: #fff;
+      margin: 100px auto 0;
+      max-width: 20rem;
+      padding: 1rem;
+      border-radius: 1rem;
+    }
+
+    #close-btn {
+      /* display */
+      float: right;
+      
+      /* size */
+      padding: 1rem;
+
+      /* style */
+      border: none;
+      background-color: transparent;
+      color: #fff;
+      font-size: 2rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <h1>Modal Window</h1>
+
+  <button id="btn">Open</button>
+
+  <div id="overlay" class="hidden">
+    <button id="close-btn">&times;</button>
+    <div id="modal">
+      <h1>Heading</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, asperiores quam? Porro, sit cum maiores odio
+        reprehenderit ea, molestiae quibusdam iusto eos, id molestias quas ipsam temporibus quo quam distinctio!</p>
+    </div>
+  </div>
+
+  <script>
+    var overlay = document.getElementById("overlay");
+    var btn = document.getElementById("btn");
+    var closeBtn = document.getElementById("close-btn");
+
+    // 오픈 버튼을 클릭했을 때
+    btn.addEventListener("click", function () {
+      overlay.classList.remove("hidden");
+    })
+
+    // overlay: 이벤트 감지 영역
+    // addEventListener: 이벤트 감시자를 추가한다
+    overlay.addEventListener("click", function (e) { // e: 이벤트 객체
+
+      console.log(e.target); // 실제 이벤트가 발생한 엘리먼트
+
+      // 클릭한 부분이 overlay일 때 또는 닫기 버튼일 때
+      if (e.target === overlay || e.target === closeBtn) {
+        overlay.classList.add("hidden");
+      }
+    })
+  </script> -->
+
+  <!-- <style>
+    #overlay {
+      position: fixed;
+      background-color: rgba(0 0 0 / 0.2);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    #modal {
+      width: 20rem;
+      height: 20rem;
+      object-fit: cover;
+      display: block;
+      margin: 100px auto 0;
+    }
+
+    #close-btn {
+      font-size: 2rem;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      float: right;
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .container img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    .container img:hover {
+      opacity: 1;
+    }
+    
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <h1>Modal Gallery</h1>
+
+  <div id="overlay" class="hidden">
+    <button id="close-btn">&times;</button>
+    <img src="" alt="" id="modal">
+  </div>
+  
+  <div class="container">
+    <img class="thumbnail" src="https://tvvmvn.github.io/front-end/img/Simba.webp" alt="">
+    <img class="thumbnail" src="https://tvvmvn.github.io/front-end/img/Timon.webp" alt="">
+    <img class="thumbnail" src="https://tvvmvn.github.io/front-end/img/Pumbaa.webp" alt="">
+  </div>
+
+  <script>
+    var overlay = document.getElementById("overlay");
+    var modal = document.getElementById('modal');
+    var thumbnails = document.getElementsByClassName('thumbnail');
+    var closeBtn = document.getElementById('close-btn');
+
+    console.log(thumbnails); // HTMLCollection(3)
+
+    for (var i=0; i<thumbnails.length; i++) {
+      // 각각의 썸네일에 이벤트리스너를 연결한다
+      thumbnails[i].addEventListener("click", function (e) {
+        console.log(e.target);
+
+        // 썸네일의 소스를 모달 이미지의 소스에 전달한다
+        modal.src = e.target.src;
+        // 오버레이를 나타나게 한다
+        overlay.classList.remove("hidden");
+      })
+    }
+
+    // 모달 닫기
+    overlay.addEventListener("click", function (e) {
+      if (e.target === overlay || e.target === closeBtn) {
+        overlay.classList.add("hidden");
+      }
+    })
+  </script> -->
+
+  <!-- <style>
+    #main {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .container {
+      width: 300px;
+      display: flex;
+    }
+
+    .thumbnail {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+
+    .active {
+      outline: 4px solid #0bf;
+      z-index: 1;
+    }
+  </style>
+
+  <h1>Gallery</h1>
+
+  <img src="https://tvvmvn.github.io/front-end/img/Simba.webp" alt="" id="main">
+  
+  <h3>Thumbnails</h3>
+
+  <div class="container">
+    <img class="thumbnail active" src="https://tvvmvn.github.io/front-end/img/Simba.webp" alt="" onclick="jumpTo(0)">
+    <img class="thumbnail" src="https://tvvmvn.github.io/front-end/img/Timon.webp" alt="" onclick="jumpTo(1)">
+    <img class="thumbnail" src="https://tvvmvn.github.io/front-end/img/Pumbaa.webp" alt="" onclick="jumpTo(2)">
+  </div>
+
+  <script>
+    var thumbnails = document.getElementsByClassName('thumbnail');
+    var main = document.getElementById('main');
+    var previousIndex = 0;
+
+    // 이벤트 attribute
+    // onEventName=eventHandler()
+    function jumpTo(thisIndex) {
+      // 이전 시점의 변수값에 접근할 수 있다
+      console.log("이전 인덱스:", previousIndex);
+      console.log("현재 인덱스:", thisIndex);
+
+      // 썸네일의 소스를 메인이미지의 소스에 전달한다
+      main.src = thumbnails[thisIndex].src;
+
+      // 같은 썸네일을 다시 클릭했을 경우
+      if (thisIndex === previousIndex) {
+        return;
+      }
+
+      // 현재 선택한 썸네일에 active 클래스를 추가한다
+      thumbnails[thisIndex].classList.add("active");
+      // 이전에 선택한 썸네일의 active 클래스를 제거한다
+      thumbnails[previousIndex].classList.remove("active");
+
+      previousIndex = thisIndex;
+    }
+  </script> -->
+
+  <!-- <h1>Carousel</h1>
+
+  <style>
+    /* 전체선택자 */
+    * { 
+      box-sizing: border-box;
+    }
+
+    .section {
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+
+     /* images */
+     #container {
+      height: 200px;
+      display: inline-flex;
+      transition: 0.2s;
+    }
+
+    .item {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    /* buttons */
+    #prev-btn, #next-btn {
+      position: absolute;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+      color: #fff;
+      border: none;
+    }
+
+    #prev-btn {
+      top: 0;
+      left: 0;
+    }
+
+    #next-btn {
+      top: 0;
+      right: 0;
+    }
+
+    /* indicator */
+    .indicator {
+      position: absolute;
+      bottom: 0.25rem;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .dot {
+      display: inline-block;
+      width: 0.5rem;
+      height: 0.5rem;
+      background-color: #fff;
+      border-radius: 50%;
+      opacity: 0.5;
+    }
+
+    /* toggle class */
+    .hidden {
+      visibility: hidden
+    }
+
+    .active {
+      opacity: 1;
+    }
+  </style>
+
+  <div class="section">
+    <div id="container">
+      <img class="item" src="https://tvvmvn.github.io/front-end/img/Simba.webp" alt="">
+      <img class="item" src="https://tvvmvn.github.io/front-end/img/Timon.webp" alt="">
+      <img class="item" src="https://tvvmvn.github.io/front-end/img/Pumbaa.webp" alt="">
+    </div>
+
+    <button id="prev-btn" class="hidden" onclick="navigateTo(-1)">
+      &#10094;
+    </button>
+    <button id="next-btn" onclick="navigateTo(1)">
+      &#10095;
+    </button>
+
+    <div class="indicator">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
+  <script>
+    var container = document.getElementById('container');
+    var prevBtn = document.getElementById('prev-btn');
+    var nextBtn = document.getElementById('next-btn');
+    var dots = document.getElementsByClassName('dot');
+    var imageWidth = 200;
+    var previousIndex = 0;
+    var thisIndex = 0;
+
+    // console.log(dots);
+
+    function navigateTo(data) {
+      thisIndex += data;
+
+      console.log("현재 인덱스:", thisIndex);
+      // 이전 시점의 변수 값에 접근할 수 있다
+      console.log("이전 인덱스:", previousIndex);
+
+      container.style.transform = `translateX(-${thisIndex * imageWidth}px)`;
+
+      // 마지막 이미지 일 경우 다음버튼 처리
+      if (thisIndex === 2) { // 마지막 이미지인 경우
+        nextBtn.classList.add("hidden");
+      } else { // 마지막 이미지가 아닌 경우
+        nextBtn.classList.remove("hidden");
+      }
+
+      // 이전 버튼 처리
+      if (thisIndex !== 0) { // 첫번째 이미지가 아닌 경우
+        prevBtn.classList.remove("hidden");
+      } else { // 첫번째 이미지인 경우
+        prevBtn.classList.add("hidden")
+      }
+
+      // Indicator
+      dots[thisIndex].classList.add("active");
+      dots[previousIndex].classList.remove("active");
+
+      previousIndex = thisIndex;
+    }
+  </script> -->
+
+  <!-- <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* main image */
+    .section {
+      width: 300px;
+      height: 300px;
+      position: relative;
+    }
+
+    #main {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* thumbnails */
+    .container {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      bottom: 1rem;
+      width: 100%;
+    }
+
+    .thumbnail {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+    }
+
+    /* toggle class */
+    .active {
+      outline: 2px solid #0bf;
+      z-index: 10;
+    }
+  </style>
+
+  <h1>Auto Gallery</h1>
+
+  <div class="section">
+    <img src="https://tvvmvn.github.io/front-end/img/Simba.webp" alt="" id="main">
+    
+    <div class="container">
+      <img class="thumbnail active" src="https://tvvmvn.github.io/front-end/img/Simba.webp" alt="Simba">
+      <img class="thumbnail" src="https://tvvmvn.github.io/front-end/img/Timon.webp" alt="Timon">
+      <img class="thumbnail" src="https://tvvmvn.github.io/front-end/img/Pumbaa.webp" alt="Pumbaa">
+    </div>
+  </div>
+
+  <script>
+    var thumbnails = document.getElementsByClassName('thumbnail');
+    var caption = document.getElementById('caption');
+    var main = document.getElementById('main');
+    var thisIndex = 0;
+    var previousIndex = 0;
+
+    setInterval(navigate, 3000);
+
+    console.log(thumbnails); // HTMLCollection(length)
+
+    function navigate() {
+      thisIndex++;
+
+      if (thisIndex === thumbnails.length) {
+        thisIndex = 0;
+      }
+
+      console.log("현재 인덱스:", thisIndex);
+      console.log("이전 인덱스:", previousIndex);
+      
+
+      // 썸네일의 소스를 메인 이미지의 소스에 전달한다
+      main.src = thumbnails[thisIndex].src;
+
+      // active 클래스 변경
+      thumbnails[thisIndex].classList.add("active");
+      thumbnails[previousIndex].classList.remove("active");
+
+      previousIndex = thisIndex;
+    }
+  </script> -->
+  
+  <!-- <style>
+    #form{
+      width: 24rem;
+    }
+    .form-group{
+      display: flex;
+    }
+    input{
+      border: 1px solid #ddd;
+      padding: 0.5rem;
+      flex-grow: 1;
+      font-size: 1rem;
+    }
+
+    .btn{
+      border: none;
+      background-color: #333;
+      color: #fff;
+      padding: 0.5rem 0.75rem;
+    }
+
+    .hidden{
+      display: none;
+    }
+  </style>
+
+  <form action="" id="form">
+    <h1>뉴스레터</h1>
+
+    <div class="form-group">
+      <input type="email" value="John@example.com" required>
+      <button class="btn">Submit</button>
+    </div>
+  </form>
+
+  <div id="success-message" class="hidden">
+    <h1>구독해주셔서 감사합니다!</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem animi nulla ducimus, recusandae dolores distinctio consequatur velit. Rerum nam reiciendis, cumque, id voluptatibus necessitatibus temporibus ipsam magnam labore quas ratione.
+    </p>
+  </div>
+  <script>
+    var form = document.getElementById("form");
+    var successmessage = document.getElementById("success-message");
+
+    //폼의 제출 이벤트
+    form.addEventListener("submit", function(e){
+      e.preventDefault(); // 새로고침 방지
+
+      // AJAX 요청 (새로고침 없이 서버에 요청하는 기술)
+      //요청 성공 후 사용자에게 성공 메시지를 보여준다
+      form.classList.add("hidden");
+      successmessage.classList.remove("hidden");
+    })
+  </script> -->
+
+  <!-- <style>
+    .container {
+      width: 20rem;
+    }
+
+    #input {
+      width: 100%;
+      padding: 0.5rem;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      font-size: 1rem;
+    }
+
+    #list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .item {
+      padding: 0.5rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <h1>Live Search</h1>
+
+  <div class="container">
+    <input type="text" name="" id="input" placeholder="Search">
+    
+    <ul id="list">
+      <li class="item">Guinness</li>
+      <li class="item">Heineken</li>
+      <li class="item">Budwiser</li>
+      <li class="item">Kloud</li>
+      <li class="item">Asahi</li>
+    </ul>
+  </div>
+
+  <script>
+    var input = document.getElementById("input");
+
+    // keyup: 키보드에서 손을 뗐을 때
+    input.addEventListener("keyup", function (e) {
+      
+      // e.target = input
+      var value = e.target.value;
+
+      // HTMLCollection(length)
+      var items = document.getElementsByClassName("item");
+
+      // input의 value와 리스트 아이템을 비교한다
+      for (var i=0; i<items.length; i++) {
+        // 맥주이름
+        var textContent = items[i].textContent;
+
+        // 인풋의 value와 맥주이름을 모두 소문자로 변환한다
+        value = value.toLowerCase();
+        textContent = textContent.toLowerCase();
+
+        console.log(textContent, value);
+
+        // indexOf(value): 문자열 내에서 value의 index를 리턴한다
+        if (textContent.indexOf(value) > -1) { // 맥주이름이 value를 포함할 때
+          items[i].classList.remove("hidden"); 
+        } else { // 맥주이름이 value를 포함하지 않을 때
+          items[i].classList.add("hidden"); 
+        }
+      }
+    })
+  </script> -->
+
+  <!-- <style>
+    label {
+      display: block;
+    }
+
+    input {
+      width: 16rem;
+      padding: 0.5rem;
+      border: 1px solid #ddd;
+    }
+
+    .success {
+      color: #0bf;
+    }
+
+    .error {
+      color: #f00;
+    }
+  </style>
+  
+  <h1>실시간 유효성 검사</h1>
+
+  <div class="container">
+    <label for="">Username</label>
+    <input type="text" id="input">
+    <p id="message">유저이름을 입력하세요</p>
+  </div>
+
+  <script>
+    var input = document.getElementById("input");
+    var message = document.getElementById("message");
+
+    input.addEventListener("keyup", function (e) {
+      try {
+        // e.target = input
+        var username = e.target.value;
+
+        console.log(username);
+
+        // 유저이름을 입력하지 않은 경우
+        if (!username) {
+          // 커스텀에러를 던진다
+          throw "유저이름은 필수입니다"
+        }
+
+        // 유저 이름이 짧은 경우
+        if (username.length < 5) {
+          throw "유저이름이 너무 짧습니다"
+        }
+
+        // 유효하지 않은 유저이름인 경우
+
+        // match(value): 문자열이 value를 포함하지 않을 경우 null을 리턴한다
+
+        // 정규식 (/패턴/): 문자열 검색에 필요한 패턴을 제공한다
+
+        if (username.match(/[^a-z0-9_]/)) {
+          throw "영어 소문자, 숫자와 언더스코어만 사용가능합니다"
+        }
+
+        message.innerHTML = `<span class="success">사용가능합니다</span>`
+
+      } catch (error) {
+        message.innerHTML = `<span class="error">${error}</span>`
+      }
+    })
+  </script> -->
+
+
+  <!-- <style>
+    #form {
+      width: 20rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    label {
+      display: block;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+    }
+
+    button[type=submit] {
+      padding: 0.5rem 0.75rem;
+      border: none;
+      background-color: #333;
+      color: #fff;
+    }
+
+    .error-message {
+      color: #f00;
+      margin: 0;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <h1>Contact Form</h1>
+
+  <form action="" id="form">
+    <div class="form-group">
+      <label for="">이름</label>
+      <input type="text" name="fname" placeholder="John">
+      <p id="fname-error" class="error-message hidden"></p>
+    </div>
+
+    <div class="form-group">
+      <label for="">성</label>
+      <input type="text" name="lname" placeholder="Doe">
+      <p id="lname-error" class="error-message hidden"></p>
+    </div>
+
+    <div class="form-group">
+      <label for="">이메일</label>
+      <input type="text" name="email" id="" placeholder="JohnDoe@example.com">
+      <p id="email-error" class="error-message hidden"></p>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+
+  <script>
+     var form = document.getElementById('form');
+    // 에러 메시지
+    var fnameError = document.getElementById('fname-error');
+    var lnameError = document.getElementById('lname-error');
+    var emailError = document.getElementById('email-error');
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      var formData = new FormData(e.target);
+
+      // FormData.get(name): name 속성으로 input의 value에 접근할 수 있다
+      var fname = formData.get('fname');
+      var lname = formData.get('lname');
+      var email = formData.get('email');
+
+      // 입력데이터에 접근
+      console.log(fname, lname, email);
+
+      // 이름 유효성 검사
+      if (!fname.trim()) {
+        errorHandler("이름은 필수입니다", fnameError);
+      } else if (fname.match(/[^a-zA-Z]/)) { // 영어가 아닐 경우
+        errorHandler("올바르지 않은 이름입니다", fnameError);
+      } else {
+        errorHandler(null, fnameError);
+      }
+
+      // 성 유효성 검사
+      if (!lname.trim()) {
+        errorHandler("성은 필수입니다", lnameError);
+      } else {
+        errorHanlder(null, lnameError);
+      }
+
+      // 이메일 검사
+      if (!email.trim()) {
+        errorHandler("이메일은 필수입니다", emailError);
+      } else {
+        errorHandler(null, emailError);
+      }
+    })
+
+    // 에러를 처리하는 함수
+    function errorHandler(error, container) {
+      if (error) {
+        container.classList.remove("hidden");
+        container.textContent = error;
+      } else {
+        container.classList.add("hidden");
+      }
+    }
+  </script> -->
+
+
+  <!-- <h1>Drag and Drop</h1>
+
+  <style>
+    #drop-zone {
+      border: 4px dashed #ddd;
+      width: 200px;
+      height: 100px;
+      padding: 1rem;
+    }
+  </style>
+
+  <div id="drop-zone">
+    <p>파일을 <i>여기에</i>드래그하세요</p>
+  </div>
+
+  <script>
+    var dropZone = document.getElementById("drop-zone");
+
+    // dragover: 드래그 중일 때
+    dropZone.addEventListener('dragover', dragOverHandler);
+    // drop: 드롭 할때
+    dropZone.addEventListener('drop', dropHandler);
+
+    function dropHandler(e) {
+      // dragover 이벤트에서 기본값(default): 브라우저가 파일을 연다
+      e.preventDefault(); // 파일 열기를 실행하지 않는다
+
+      console.log("드랍!")
+
+      // 업로드한 파일에 접근한다
+      var files = e.dataTransfer.files;
+
+      console.log(files);
+
+      // 여기서 서버 전송 처리
+
+      // 성공 메시지
+      alert("업로드되었습니다");
+    }
+
+    function dragOverHandler(e) {
+      // drop 이벤트에서 기본값(default): 브라우저가 파일을 연다
+      e.preventDefault(); // 파일 열기를 실행하지 않는다
+
+      console.log("드래그 중")
+    }
+  </script> -->
+
+
+  <!-- <style>
+    .dark-mode {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+
+  <h1>테마 선택</h1>
+
+  <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+    Mollitia voluptas architecto optio totam dolore perspiciatis qui nihil?
+    Nesciunt eligendi id impedit, expedita earum, enim veniam laudantium,
+    pariatur quasi repellendus est.
+  </p>
+
+  <input type="checkbox" id="checkbox" name="">
+  <label for="checkbox">
+    Dark Mode
+  </label>
+
+  <script>
+    var checkbox = document.getElementById("checkbox");
+
+    // localStorage.getItem(key): 로컬스토리지에 저장된 데이터에 접근한다
+    var isDarkMode = localStorage.getItem("darken");
+
+    console.log(isDarkMode);
+
+    // 페이지가 처음 로드되었을 때
+    if (isDarkMode) {
+      document.body.classList.add("dark-mode");
+      checkbox.checked = true;
+    }
+
+    // checkbox에서 change이벤트: 체크상태가 바뀔 때
+    checkbox.addEventListener("change", function (e) {
+      // e.target: checkbox(input)
+      var checked = e.target.checked;
+
+      if (checked) {
+        document.body.classList.add("dark-mode");
+        // localStorage: 브라우저가 제공하는 저장공간
+        // localStorage.setItem(key, value): 로컬스토리지에 데이터를 저장한다
+        localStorage.setItem("darken", new Date().toLocaleString());
+      } else {
+        document.body.classList.remove("dark-mode");
+        // localStorage.removeItem(key): 로컬스토리지에 저장된 데이터를 삭제한다
+        localStorage.removeItem("darken")
+      }
+    })
+  </script> -->
+
+  <!-- <style>
+    .darkmode{
+      background-color: #000;
+      color: #fff;
+    }
+  </style>
+  <h1>Theme</h1>
+  
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta in iusto, ipsa deleniti fugiat, at corrupti quo cupiditate veritatis excepturi animi eveniet consequuntur inventore, praesentium optio quam expedita voluptates autem.</p>
+  
+  <input type="checkbox" id="checkbox">
+  <label for="checkbox">Dark Mode</label>
+
+  <script>
+    var checkbox = document.getElementById("checkbox");
+    
+    // checkbox에서 change 이벤트: 체크상태가 바뀔 때
+    checkbox.addEventListener("change", function(e){
+      // e.target: checkbox를 의미
+      var checked = e.target.checked;
+      
+      if(checked){
+        document.body.classList.add("darkmode");
+      } else{
+        document.body.classList.remove("darkmode");
+      }
+    })
+
+  </script> -->
+
+  <!-- <h1>더이상 보지않기</h1>
+
+  <style>
+    #promotion {
+      background-color: #eee;
+      padding: 1rem;
+    }
+
+    #close-btn {
+      float: right;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #block-btn {
+      padding: 0.5rem 0.75rem;
+      border: none;
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+
+  <div id="promotion">
+    <span id="close-btn">&times;</span>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    </p>
+    <button id="block-btn">더 이상 보지않기</button>
+  </div>
+
+  <script>
+    var closeBtn = document.getElementById('close-btn');
+    var blockBtn = document.getElementById('block-btn');
+    var promotion = document.getElementById('promotion');
+
+    // 처음 페이지가 로드되었을 때
+    if (localStorage.getItem("blockedAt")) {
+      promotion.classList.remove("hidden");
+    }
+
+    // 닫기 버튼을 클릭했을 때
+    closeBtn.addEventListener("click", function () {
+      promotion.classList.add("hidden");
+    })
+
+    // 블락 버튼을 클릭했을 때
+    blockBtn.addEventListener("click", function () {
+      promotion.classList.add("hidden");
+      localStorage.setItem("blockedAt", new Date().toLocaleString());
+    })
+
+  </script> -->
+
+   <!-- <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #eee;
+    }
+
+    #container {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      max-width: 640px;
+      margin: auto;
+    }
+
+    textarea { 
+      height: 12rem;
+      padding: 1rem;
+      border: none;
+      box-shadow: 0 0 5px #ddd;
+      outline: none;
+      resize: none;
+    }
+    
+    #add-btn {
+      /* position */
+      position: fixed;
+      right: 1rem;
+      bottom: 1rem;
+      /* size */
+      width: 4rem;
+      height: 4rem;
+      /* display */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* style */
+      background-color: #aaa;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      font-size: 4rem;
+      cursor: pointer;
+    }
+
+    #add-btn:hover {
+      background-color: #888;
+    }
+  </style>
+
+  <h1>Sticky Notes</h1>
+
+  <div id="container"></div>
+  <button id="add-btn">+</button>
+
+  <script>
+    var container = document.getElementById("container");
+    var addBtn = document.getElementById("add-btn");
+    // 노트를 저장할 변수
+    var notes = [];
+
+    // 추가 버튼을 클릭하면 노트를 추가한다
+    addBtn.addEventListener("click", addNote);
+    // 페이지가 로드되었을 때
+    window.addEventListener("DOMContentLoaded", getNotes);
+
+    // 노트 리스트를 렌더링 하는 함수
+    function getNotes() {
+      notes = getDocs();
+
+      // 로컬스토리지로부터 가져온 노트 리스트
+      console.log(notes);
+
+      for (var i=0; i<notes.length; i++) {
+        createNoteElement(notes[i].id, notes[i].content);
+      }
+    }
+
+    // 로컬스토리지에서 노트데이터를 불러오는 함수
+    function getDocs() {
+      // 로컬스토리지에 노트데이터가 없을 때
+      if (!localStorage.getItem("noteStorage")) {
+        // 노트데이터를 생성한다
+        localStorage.setItem("noteStorage", "[]");
+      }
+
+      // 노트데이터를 객체로 변환 후 리턴한다
+      return JSON.parse(localStorage.getItem("noteStorage"));
+    };
+
+    // 로컬스토리지를 동기화하는 함수
+    function saveDoc(notes) {
+      localStorage.setItem("noteStorage", JSON.stringify(notes));
+    };
+
+    // 노트 추가
+    function addNote() {
+      // 새로운 노트 객체
+      // Date.now: 현재 시간을 ms단위로 리턴한다
+      var newNote = { id: "n" + Date.now(), content: "" };
+
+      // 노트 리스트에 새노트를 추가한다
+      notes.push(newNote);
+
+      // 로컬스토리지 동기화
+      saveDoc(notes);
+
+      // 렌더링을 위해 새노트 객체를 전달한다
+      createNoteElement(newNote.id, newNote.content);
+    }
+
+    // 노트 편집
+    function editNote(id, content) {
+      console.log(id, content);
+
+      // notes 변수를 동기화한다
+      for (var i=0; i<notes.length; i++) {
+        // 전달받은 id와 일치하는 id를 가진 노트객체의 content를 전달받은 content로 업데이트 한다
+        if (notes[i].id === id) {
+          notes[i].content = content;
+        }
+      }
+
+      // 로컬 스토리지 동기화
+      saveDoc(notes);
+    }
+
+    // 노트 삭제
+    function deleteNote(id, noteElement) {
+      console.log(id, noteElement);
+
+      // 전달받은 id와 일치하는 id를 가진 노트객체를 notes변수에서 제거한다
+      for(var i=0; i<notes.length; i++) {
+        if (notes[i].id === id) {
+          // 배열에서 index가 i에 해당하는 아이템을 삭제한다
+          notes.splice(i, 1);
+        }
+      }
+
+      // 로컬 스토리지 동기화
+      saveDoc(notes);
+
+      // 뷰에서 note엘리먼트를 제거한다
+      // removeChild(삭제할 child): 컨테이너에서 해당하는 child를 삭제한다
+      container.removeChild(noteElement);
+    }
+
+    // 렌더링 처리
+    function createNoteElement(id, content) {
+      // textarea 엘리먼트를 생성한다
+      var noteElement = document.createElement("textarea");
+
+      // 엘리먼트의 value 속성
+      noteElement.value = content;
+
+      // 엘리먼트에 이벤트리스너를 연결한다
+      noteElement.addEventListener("keyup", (e) => editNote(id, e.target.value));
+      // 더블클릭 이벤트
+      noteElement.addEventListener("dblclick", (e) => deleteNote(id, e.target));
+
+      // container의 첫번째 자식으로 noteElement를 추가한다
+      container.prepend(noteElement);
+    }
+  </script> -->
+
+  <!-- <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    label {
+      display: block;
+    }
+
+    input {
+      width: 100%;
+    }
+
+    #canvas {
+      width: 100%;
+      border: 1px solid #ddd;
+    }
+  </style>
+
+  <h1>JS Image Editor</h1>
+
+  <p>
+    <input type="file" name="" id="file-input">
+  </p>
+
+  <canvas id="canvas"></canvas>
+
+  <nav>
+    <label for="brightness">Brigtness</label>
+    <input type="range" name="brightness" id="brightness" min="0" max="200" value="100">
+  
+    <label for="saturation">Saturation</label>
+    <input type="range" name="saturation" id="saturation" min="0" max="200" value="100">
+  
+    <label for="inversion">Inversion</label>
+    <input type="range" name="inversion" id="inversion" min="0" max="100" value="0">
+  
+    <label for="blur">Blur</label>
+    <input type="range" name="blur" id="blur" min="0" max="10" value="0">
+  </nav>
+
+  <script>
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+    var fileInput = document.getElementById('file-input');
+    var brightnessInput = document.getElementById('brightness');
+    var saturationInput = document.getElementById('saturation');
+    var inversionInput = document.getElementById('inversion');
+    var blurInput = document.getElementById('blur');
+    var imgElement = new Image();
+    // 필터값을 저장하는 객체
+    var filter = {};
+
+    // 파일 업로드 이벤트
+    fileInput.addEventListener("change", (e) => {
+      // 선택한 파일 객체
+      var file = e.target.files[0];
+
+      // URL.createObjectURL(객체): blob 파일을 생성 후 파일에 접근 가능한 URL을 리턴한다
+      var src = URL.createObjectURL(file);
+
+      // 이미지의 source에 blob객체의 URL을 할당한다
+      imgElement.src = src;
+    });
+
+    // 이미지 로드 이벤트
+    imgElement.addEventListener("load", (e) => {
+      // 캔버스의 크기를 이미지 크기에 맞춘다
+      canvas.width = imgElement.width;
+      canvas.height = imgElement.height;
+
+      // 필터 초기화
+      initialize();
+      // 캔버스에 이미지를 나타낸다
+      drawImage();
+    });
+
+    // 각 필터의 값 변경 이벤트
+    brightnessInput.addEventListener("change", (e) => {
+      applyFilter("brightness", e.target.value, "%");
+    });
+
+    saturationInput.addEventListener("change", (e) => {
+      applyFilter('saturate', e.target.value, '%');
+    });
+
+    inversionInput.addEventListener("change", (e) => {
+      applyFilter('invert', e.target.value, '%');
+    });
+
+    blurInput.addEventListener("change", (e) => {
+      applyFilter('blur', e.target.value, 'px');
+    });
+
+    // 필터 적용 함수
+    function applyFilter(name, value, unit) {
+      // 필터 객체를 업데이트한다
+      filter[name] = value + unit;
+
+      var filter_list = [];
+
+      for (key in filter) {
+        filter_list.push(`${key}(${filter[key]})`);
+      }
+
+      // 문자열 타입의 필터 데이터
+      var filter_str = filter_list.join(" ");
+
+      console.log(filter_str);
+
+      // 캔버스가 요구하는 형식에 맞게 필터데이터를 가공한다
+      ctx.filter = filter_str;
+
+      // 이미지에 필터 적용
+      drawImage();
+    };
+
+    // 캔버스에 이미지를 나타내는 함수
+    function drawImage() {
+      // drawImage(표현할 이미지, left, top)
+      ctx.drawImage(imgElement, 0, 0);
+    };
+
+    // 필터를 초기화 하는 함수
+    function initialize() {
+      // range의 값을 초기화한다
+      brightnessInput.value = 100;
+      saturationInput.value = 100;
+      inversionInput.value = 0;
+      blurInput.value = 0;
+
+      // 필터 객체를 초기화한다
+      filter = {};
+    };
+
+  </script> -->
+
+
+  <!-- <nav>
+    <ul>
+      <li>
+        <a href="#home">Home</a>
+      </li>
+      <li>
+        <a href="#posts">Posts</a>
+      </li>
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  
+  <div id="root"></div>
+
+  <script>
+    // hashchange: hash가 바뀔 때
+    window.addEventListener("hashchange", () => {
+      router();
+    })
+
+    // 요청 URL에 적합한 페이지를 연결한다
+    function router() {
+      // 요청 URL
+      var url = location.hash.substring(1); // hash string에서 hash(#)를 제거한다
+
+      var routes = [
+        // 라우트 객체
+        { path: 'home', element: Home },
+        { path: 'posts', element: Posts },
+        { path: 'post', element: Post },
+        { path: 'contact', element: Contact },
+      ]
+
+      // 요청 URL과 일치하는 path를 가진 라우트 객체의 element를 화면에 렌더링한다
+      for (var i=0; i<routes.length; i++) {
+        var path = routes[i].path;
+
+        // 요청 변수가 있을 경우
+        if (url.indexOf("?") > 0) {
+          // query: 요청변수 저장
+          var query = url.substring(url.indexOf("?"));
+          url = url.substring(url.indexOf("?"), -1);
+        }
+
+        // 라우트의 path와 요청 URL 비교
+        if (path === url) {
+          document
+            .getElementById("root")
+            // 요청변수를 함수에 전달한다
+            .innerHTML = routes[i].element(query); // 렌더링
+        }
+      }
+    }
+
+    // 페이지들
+
+    // 홈
+    function Home() {
+      return (` 
+        <h1>Home</h1>
+        <p>Welcome to my blog.</p>
+      `);
+    }
+
+    // 게시물 리스트
+    function Posts() {
+      // 요청변수: postId
+      return (`
+        <h1>Posts</h1>
+        <ul>
+          <li>
+            <a href="#post?postId=p1">Second post</a>
+          </li>  
+          <li>
+            <a href="#post?postId=p0">First post</a>
+          </li>  
+        </ul>
+      `)
+    }
+
+    // 게시물 상세보기
+    function Post(query) {  
+      return (`
+        <h1>Post</h1>
+        <p>${query}</p>
+      `)
+    }
+    // Contact
+    function Contact() {
+      return (`
+        <h1>Contact</h1>
+        <p>john@example.com</p>
+      `)
+    }
+  </script> -->
+
+</body>
+</html>

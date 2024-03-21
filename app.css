@@ -1,0 +1,44 @@
+span{
+    color: violet;
+}
+/* body{
+    background-color: ivory;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+} */
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header"
+        "sidebar menu menu menu menu"
+        "sidebar content content content"  
+        "sidebar content content content"
+        "footer footer footer footer";
+  }
+
+  /* <div class="container">
+            <form action="/login.php">
+                <h1>로그인</h1>
+
+                <div>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username">
+                </div>
+
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="show-password">
+                    <label for="show-password">비밀번호 보기</label>
+                </div>
+
+                <button type="submit">로그인</button>
+            </form>
+
+        </div> */

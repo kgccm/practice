@@ -1,0 +1,15 @@
+body{
+    background-color: aliceblue;
+}
+main{
+    background-color: pink;
+}
+footer{
+    background-color: orange;
+}
+h1{
+    color: brown;
+}
+p{
+    font-style: italic;
+}

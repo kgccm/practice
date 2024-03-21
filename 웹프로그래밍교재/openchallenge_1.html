@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 소개</title>
+</head>
+<style>
+h1{
+    color: blueviolet;
+    text-align: center;
+}
+div{
+    color: green;
+    font-size: 20px;
+}
+span{
+    color: red;
+    font-size: 20px;
+}
+hr{
+    height: 10px;
+    border: solid gray;
+    background-color: gray;
+}
+body{
+    background-color: lightblue;
+    color: green;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+img{
+    width: 300px;
+    height: 300px;
+}
+
+</style>
+<script>
+    function show(){
+        document.getElementById("sr").src="https://i.namu.wiki/i/MOyHOa-1L1engOR-mFyNjxXNRwYqqminFUqNn-hgfYc07BshrvP2yH2cn83ud4OOZM7u2YGqwSSZkjiCkWa3RA.webp"
+    }
+    function hide(){
+        document.getElementById("sr").src="";
+    }
+</script>
+<body>
+    <h1 onmouseover="show()" onmouseout="hide()">슈렉</h1>
+    <hr>
+    <div><img src="https://i.namu.wiki/i/MOyHOa-1L1engOR-mFyNjxXNRwYqqminFUqNn-hgfYc07BshrvP2yH2cn83ud4OOZM7u2YGqwSSZkjiCkWa3RA.webp" id="sr"></div>
+    저는 대한민국에서 태어나서 컴퓨터 공학을 전공하는 학생입니다. 제가 제일 좋아하는 과목은 <span>웹 프로그래밍</span>이고, 그 중에서도 <span>자바스크립트</span>를 제일 잘합니다.
+  
+
+</body>
+</html>

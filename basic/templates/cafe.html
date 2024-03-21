@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cafe</title>
+    <!-- Tailwindcss CDN -->
+    <script src="https://cdn.TailwindCss.com"></script>
+    <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata" rel="stylesheet">
+    <style>
+        body{
+            font-family: "Inconsolata", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-neutral-200">
+    
+    <!-- NAV BAR -->
+    <nav class="Sticky top-0 p-2  w-full z-10 bg-black">
+        <ul class="flex">
+            <li class="w-1/4">
+                <a href="#" class="block p-2 text-center text-white hover:bg-white hover:text-black">HOME</a>
+            </li>
+            <li class="w-1/4">
+                <a href="#about" class="block p-2 text-center text-white hover:bg-white hover:text-black">ABOUT</a>
+            </li>
+            <li class="w-1/4">
+                <a href="#menu" class="block p-2 text-center text-white hover:bg-white hover:text-black">MENU</a>
+            </li>
+            <li class="w-1/4">
+                <a href="#where" class="block p-2 text-center text-white hover:bg-white hover:text-black">WHERE</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- MAIN IMAGE -->
+    <div class="h-[500px] bg-[url('https://www.w3schools.com/w3images/coffeehouse.jpg')] bg-cover bg-center grayscale-[50%]">
+        <div class="h-[450px] flex flex-col justify-center">
+            <h1 class="text-8xl text-center text-white">
+                the <br>
+                <span class="inline-block mt-8">
+                    Cafe
+                </span>
+            </h1>
+        </div>
+        <div class="mt-4 px-4 flex justify-between">
+            <span class="bg-black text-sm text-white px-2 invisible md:invisible">Open from 6am to 5pm</span>
+            <span class="text-sm text-white">15 Adr street, 5015</span>
+        </div>
+    </div>
+
+    <main class="max-w-2xl mx-auto px-4">
+        <!-- ABOUT -->
+        <div id="about" class="py-16">
+            <h1 class="text-2xl text-center tracking-widest">
+                <span class="bg-black text-white px-2">ABOUT THE CAFE</span>
+            </h1>
+        </div>
+
+        <p class="text-lg my-4">
+            The Cage was founded in blabla by MR.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, hic corporis quidem tempora fugiat doloremque omnis aspernatur accusantium accusamus eum ex exercitationem, a illum veniam. Quasi ducimus ut autem voluptatum.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt cupiditate harum veritatis 
+            deleniti nihil aspernatur beatae pariatur nulla magni ullam ut animi fuga numquam, culpa impedit? Totam, voluptas quidem? Totam?
+        </p>
+        <p class="text-lg my-4">
+            In Addition to our full espresso and brew bar menu,
+            we serve fresh made-to-order breakfast and lunch sandwiches,
+            as well as a selection of sides and salads and other good stuff.
+        </p>
+
+        <div class="mt-8 px-4 py-2 bg-gray-200 border-1-8 border-1-gray-300">
+            <p class="my-4 text-lg italic">
+                "Use products from nature for what it's worth - but never too early, nor too lage." Fresh is the new sweet.
+            </p>
+            <p class="my-4 text-lg">
+                Chef, Coffeeist and Owner: Liam Brown
+            </p>
+        </div>
+
+        <img class="mt-8 grayscale-[80%]" src="https://www.w3schools.com/w3images/coffeeshop.jpg" alt="">
+
+        <p class="my-4 text-lg">
+            <span class="font-semibold">Opening hours:</span> everyday from 6am to 5pm.
+        </p>
+
+        <p class="my-4 text-lg">
+            <span class="font-semibold">Address:</span> 15 Adr street, 5015, NY
+        </p>
+
+        <!-- MENU -->
+        <div id="menu" class="py-16">
+            <h1 class="text-2xl text-center tracking-widest">
+                <span class="bg-black text-white px-2">THE MENU</span>
+            </h1>
+        </div>
+
+        <!-- 메뉴판 -->
+        <div class="border bg-white shadow-lg flex flex-wrap px-4 py-2">
+            <input type="radio" class="hidden peer/eat" name="menu" id="eat" checked>
+            <label for="eat"
+                class="w-1/2 text-lg text-center font-semibold cursor-pointer peer-checked/eat:bg-neutral-400 peer-checked/eat:text-white">
+                Eat
+            </label>
+
+            <input type="radio" class="hidden peer/drink" name="menu" id="drink">
+            <label for="drink"
+                class="w-1/2 text-lg text-center font-semibold cursor-pointer peer-checked/drink:bg-neutral-400 peer-checked/drink:text-white">
+            Drink
+        </label>
+
+
+        <!-- MENU: Eat -->
+        <div class="py-4 w-full hidden peer-checked/eat:block">
+            <div class="py-4">
+                <h3 class="my-4 text-xl font-semibold">Bread Basket</h3>
+                <p class="my-4 text-lg text-gray-500">Assortment of fresh baked fruit breads and muffins 5.50</p>
+            </div>
+            <div class="py-4">
+                <h3 class="my-4 text-xl font-semibold">Honey Almond Granola with Fruits</h3>
+                <p class="my-4 text-lg text-gray-500">
+                    Natural cereal of honey toasted oats, raisins, almonds and dates 7.00
+                </p>
+            </div>
+            <div class="py-4">
+                <h3 class="my-4 text-xl font-semibold">Belgian Waffle</h3>
+                <p class="my-4 text-lg text-gray-500">
+                    Vanilla flavored batter with malted flour 7.50
+                </p>
+            </div>
+            <div class="py-4">
+                <h3 class="my-4 text-xl font-semibold">Scrambled eggs</h3>
+                <p class="my-4 text-lg text-gray-500">
+                    Scrambled eggs, roasted red pepper and garlic, with green onions 7.50
+                </p>
+            </div>
+            <div class="py-4">
+                <h3 class="my-4 text-xl font-semibold">Bluberry Pancakes</h3>
+                <p class="my-4 text-lg text-gray-500">
+                    With syrup, butter and lots of berries 8.50
+                </p>
+            </div>
+        </div>
+
+        <!-- MENU: Drink -->
+        <div class="py-4 w-full hidden peer-checked/drink:block">
+            <div class="py-4">
+                <h3 class="my-4 text-xl font-semibold">Coffee</h3>
+                <p class="my-4 mt-4 text-lg text-gray-500">Regular coffee 2.50</p>
+            </div>
+            <div class="py-4">
+                <h3 class="my-4 text-xl font-semibold">Chocolate</h3>
+                <p class="my-4 mt-4 text-lg text-gray-500">
+                    Chocolate espresso with milk 4.50
+                </p>
+            </div>
+            <div class="py-4">
+                <h3 class="my-4 text-xl font-semibold">Corretto</h3>
+                <p class="my-4 mt-4 text-lg text-gray-500">
+                    Whiskey and Coffee 5.00
+                </p>
+            </div>
+            <div class="py-4">
+                <h3 class="my-4 text-xl font-semibold">Iced tea</h3>
+                <p class="my-4 mt-4 text-lg text-gray-500">
+                    Hot tea, except not hot 3.00
+                </p>
+            </div>
+            <div class="py-4">
+                <h3 class="my-4 text-xl font-semibold">Soda</h3>
+                <p class="my-4 mt-4 text-lg text-gray-500">
+                    Coke, Sprite, Fanta, etc. 2.50
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <img class="mt-8 grayscale-[80%]" src="https://www.w3schools.com/w3images/coffeehouse2.jpg" alt="">
+
+    <!-- WHERE -->
+    <div id="where" class="py-16">
+        <h1 class="text-2xl text-center tracking-widest">
+            <span class="bg-black text-white px-2">WHERE TO FIND US</span>
+        </h1>
+    </div>
+
+    <p class="text-lg my-4">
+        Find us at some address at some place.
+    </p>
+    
+    <img class="mt-4 grayscale-[80%]" src="https://www.w3schools.com/w3images/map.jpg" alt="">
+
+    <p class="my-4 text-lg">
+        <span class="bg-black text-white px-2 py-1">FYI!</span>
+        We offer full-service catering for any event, large or small.
+        We understand your needs and we will cater the food to
+        satisfy the biggerst criteria of them all, both look and taste.
+    </p>
+    </main>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설문지</title>
+</head>
+<style>
+    body{
+        margin: 1rem;
+        padding: 1rem;
+    }
+</style>
+<body>
+    <h1>설문지</h1>
+    소프트웨어 기술에 대한 의견을 듣습니다. 많은 참여 부탁드립니다
+    <hr>
+    <form>
+        학년 <input type="radio" name="grade" value="1" checked>1학년
+        <input type="radio" name="grade" value="2">2학년
+        <input type="radio" name="grade" value="3">3학년
+        <input type="radio" name="grade" value="4">4학년
+        <br>
+        성별 <input type="radio" name="sex" value="1" checked>남자
+        <input type="radio" name="sex" value="2">여자
+        <br>
+        관심분야 <select name="os">
+            <option value="1">모바일소프트웨어</option>
+            <option value="2">임베디드 시스템</option>
+            <option value="3">머신러닝</option>
+        </select><br>
+        남기고 싶은 말<br>
+        <textarea name="textarea" id="" cols="50" rows="10"></textarea>
+    </form>
+    &copy;Copyright 2017 by Kitae
+</body>
+</html>

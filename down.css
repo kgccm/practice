@@ -1,0 +1,94 @@
+* {
+    font-family: "Montserrat", sans-serif;
+}
+body {
+    background-color: #98b0ff;
+}
+header {
+    position:relative;
+    display: flex;
+    justify-content: center;
+    color:black;
+}
+.sbs {
+    position:absolute;
+    top:50px;
+    color:black; 
+}
+.container {
+    position: relative;
+    display:flex;
+    justify-content: center;
+    margin-top:80px;
+}
+.form {
+    position: absolute;
+    display: flex;
+    height:600px;
+    width:500px;
+    justify-content: center;
+    padding:10px;
+    border-radius: 8px;
+    overflow:hidden;
+    border:none;
+    background-color: white;
+}
+.title {
+    position: absolute;
+    align-items: center;
+}
+.imgbox {
+    position: absolute;
+    max-width: 500px;
+    display: flex;
+    margin-top:100px;
+}
+
+.inputbox {
+    
+    position: relative;
+    display: flex;
+    border:none;
+    height:40%;
+    width:50%;
+    margin-top:320px;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.userid {
+    position: absolute;
+    display: flex;
+    top:20px;
+    border-radius: 8px;
+    padding:10px;
+    border:1px solid;
+}
+
+.userpw {
+    position: absolute;
+    display: flex;
+    top:80px;
+    border-radius: 8px;
+    padding:10px;
+    border:1px solid;
+}
+
+.submit {
+   position: absolute;
+   display: flex;
+   background-color:#567dff;
+   bottom:20px;
+   border:none;
+   padding:0 40px;
+   font-size: 40px;
+   color:white;
+   border-radius: 8px;
+}
+.submit:hover {
+    background-color: #1b327a;
+}
+.click {
+    position:absolute;
+    bottom:0;
+}
